@@ -11,7 +11,7 @@ fi
 if [ -f /etc/lsb-release ]; then
 
   #sudo apt-get -y install libglfw3-dev
-
+  sudo apt -y install libxrandr-dev
   sudo apt -y install libxinerama-dev
   sudo apt -y install libxcursor-dev
   sudo apt -y install libxi-dev
