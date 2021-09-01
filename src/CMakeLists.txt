@@ -6,10 +6,10 @@ add_library(glfw ${GLFW_LIBRARY_TYPE}
                  vulkan.c window.c)
 
 add_custom_target(update_mappings
-    COMMAND "${CMAKE_COMMAND}" -P "${GLFW_SOURCE_DIR}/CMake/GenerateMappings.cmake" mappings.h.in mappings.h
+    COMMAND "${CMAKE_COMMAND}" -P "${GLFW_SOURCE_DIR}/cmake/GenerateMappings.cmake" mappings.h.in mappings.h
     WORKING_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}"
     COMMENT "Updating gamepad mappings from upstream repository"
-    SOURCES mappings.h.in "${GLFW_SOURCE_DIR}/CMake/GenerateMappings.cmake"
+    SOURCES mappings.h.in "${GLFW_SOURCE_DIR}/cmake/GenerateMappings.cmake"
     VERBATIM)
 
 set_target_properties(update_mappings PROPERTIES FOLDER "GLFW3")
