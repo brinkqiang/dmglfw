@@ -1,3 +1,4 @@
+add_compile_options(-D_POSIX_C_SOURCE=199309L) 
 
 add_library(glfw ${GLFW_LIBRARY_TYPE}
                  "${GLFW_SOURCE_DIR}/include/GLFW/glfw3.h"
